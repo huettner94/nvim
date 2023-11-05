@@ -1,0 +1,1 @@
+Checkout at `~/.config/nvim`
