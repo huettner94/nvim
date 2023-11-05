@@ -14,6 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install plugins
 require("lazy").setup({
+-- Colorscheme https://github.com/RRethy/nvim-base16
+  {
+    "RRethy/nvim-base16",
+    config = function()
+      vim.cmd('colorscheme base16-tomorrow-night')
+    end
+  },
 -- WhichKey to show keyboard mappings https://github.com/folke/which-key.nvim
   {
     "folke/which-key.nvim",
