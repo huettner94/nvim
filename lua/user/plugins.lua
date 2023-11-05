@@ -25,7 +25,9 @@ require("lazy").setup({
   {
     "folke/which-key.nvim",
     event = "VeryLazy"
-  }
+  },
+-- Dynamic Terminals https://github.com/akinsho/toggleterm.nvim
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 })
 
 
