@@ -27,7 +27,22 @@ require("lazy").setup({
     event = "VeryLazy"
   },
 -- Dynamic Terminals https://github.com/akinsho/toggleterm.nvim
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
+-- LSP Servers https://github.com/neovim/nvim-lspconfig
+  {"neovim/nvim-lspconfig"},
+-- Autocompletion https://github.com/hrsh7th/nvim-cmp
+  {"hrsh7th/nvim-cmp"},
+-- Load autocompletion from LSP https://github.com/hrsh7th/cmp-nvim-lsp
+  {"hrsh7th/cmp-nvim-lsp"},
+-- Load autocompletion from paths https://github.com/hrsh7th/cmp-buffer
+  {"hrsh7th/cmp-buffer"},
+-- Integrate autocompletion with snippets manager https://github.com/saadparwaiz1/cmp_luasnip
+  {"saadparwaiz1/cmp_luasnip"},
+-- Snippet support (needed for autocompletion) https://github.com/L3MON4D3/LuaSnip
+  {
+    "L3MON4D3/LuaSnip",
+    build = "make install_jsregexp"
+  }
 })
 
 
