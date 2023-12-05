@@ -42,6 +42,19 @@ require("lazy").setup({
   {
     "L3MON4D3/LuaSnip",
     build = "make install_jsregexp"
+  },
+-- Automatically loading .venv files https://github.com/linux-cultist/venv-selector.nvim
+  {
+    "linux-cultist/venv-selector.nvim",
+    event = "VeryLazy",
+    opts = {
+      name = ".venv"
+    }
+  },
+-- Fuzzy search and selection https://github.com/nvim-telescope/telescope.nvim
+  {
+    'nvim-telescope/telescope.nvim',
+     dependencies = { 'nvim-lua/plenary.nvim' }
   }
 })
 
