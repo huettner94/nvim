@@ -55,7 +55,9 @@ require("lazy").setup({
   {
     'nvim-telescope/telescope.nvim',
      dependencies = { 'nvim-lua/plenary.nvim' }
-  }
+  },
+-- Language Parser, dependency of a bunch of things https://github.com/nvim-treesitter/nvim-treesitter
+  {"nvim-treesitter/nvim-treesitter"}
 })
 
 
