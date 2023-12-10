@@ -57,7 +57,9 @@ require("lazy").setup({
      dependencies = { 'nvim-lua/plenary.nvim' }
   },
 -- Language Parser, dependency of a bunch of things https://github.com/nvim-treesitter/nvim-treesitter
-  {"nvim-treesitter/nvim-treesitter"}
+  {"nvim-treesitter/nvim-treesitter"},
+-- Formatting on save https://github.com/lukas-reineke/lsp-format.nvim
+  {"lukas-reineke/lsp-format.nvim"}
 })
 
 
