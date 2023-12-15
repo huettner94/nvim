@@ -59,7 +59,12 @@ require("lazy").setup({
 -- Language Parser, dependency of a bunch of things https://github.com/nvim-treesitter/nvim-treesitter
   {"nvim-treesitter/nvim-treesitter"},
 -- Formatting on save https://github.com/lukas-reineke/lsp-format.nvim
-  {"lukas-reineke/lsp-format.nvim"}
+  {"lukas-reineke/lsp-format.nvim"},
+-- Statusline configurable in lua https://github.com/nvim-lualine/lualine.nvim-treesitter
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  }
 })
 
 
