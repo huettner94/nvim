@@ -30,6 +30,9 @@ require("lazy").setup({
   {'akinsho/toggleterm.nvim', version = "*", config = true},
 -- LSP Servers https://github.com/neovim/nvim-lspconfig
   {"neovim/nvim-lspconfig"},
+-- Autoinstalling LSP Servers https://github.com/williamboman/mason-lspconfig.nvim
+  {"williamboman/mason.nvim"},
+  {"williamboman/mason-lspconfig.nvim"},
 -- Autocompletion https://github.com/hrsh7th/nvim-cmp
   {"hrsh7th/nvim-cmp"},
 -- Load autocompletion from LSP https://github.com/hrsh7th/cmp-nvim-lsp

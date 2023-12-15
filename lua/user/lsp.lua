@@ -1,3 +1,9 @@
+-- Autoinstalling lsp
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+-- now real lsp config
+
 local lspconfig = require('lspconfig')
 
 -- Add additional capabilities supported by nvim-cmp
