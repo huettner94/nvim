@@ -67,7 +67,9 @@ require("lazy").setup({
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" }
-  }
+  },
+-- Git highlights to changed lines https://github.com/lewis6991/gitsigns.nvim
+  {"lewis6991/gitsigns.nvim"}
 })
 
 
