@@ -19,4 +19,16 @@ wk.register({
     c = { "<cmd>Telescope git_commits<cr>", "Commits" },
     b = { "<cmd>Telescope git_branches<cr>", "Branches" },
   },
+  s = {
+    function()
+      local lsp_format = require("lsp-format")
+      local disabled = lsp_format.disabled
+      lsp_format.disable({args = ""})
+      vim.api.nvim_command('write')
+      if not disabled then
+        lsp_format.enable({args = ""})
+      end
+    end,
+    "Save without formatting"
+  },
 }, { prefix = "<leader>" })
