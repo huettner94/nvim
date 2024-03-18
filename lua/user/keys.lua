@@ -19,6 +19,11 @@ wk.register({
     c = { "<cmd>Telescope git_commits<cr>", "Commits" },
     b = { "<cmd>Telescope git_branches<cr>", "Branches" },
   },
+  d = { 
+    name = "Diagnostics",
+    l = {"<cmd>Telescope diagnostics<cr>", "List"},
+    s = { vim.diagnostic.open_float, "Show"},
+  },
   s = {
     function()
       local lsp_format = require("lsp-format")
