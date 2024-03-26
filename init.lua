@@ -6,7 +6,10 @@ require("user.toggleterm")
 require("user.lsp")
 require("user.cmp")
 require("user.treesitter")
-require("user.keys")
 require("user.notsosafelinks")
 require("user.lualine")
 require("user.gitsigns")
+require("user.dap")
+-- Configure keys at the end when all is loaded
+require("user.keys")
+

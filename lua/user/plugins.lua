@@ -69,7 +69,13 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" }
   },
 -- Git highlights to changed lines https://github.com/lewis6991/gitsigns.nvim
-  {"lewis6991/gitsigns.nvim"}
+  {"lewis6991/gitsigns.nvim"},
+-- Debugging Adapter https://github.com/mfussenegger/nvim-dap
+  {"mfussenegger/nvim-dap"},
+-- Debugging Adapter UI https://github.com/rcarriga/nvim-dap-ui
+  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+-- Automagic debug adapter for go https://github.com/leoluz/nvim-dap-go
+  {"leoluz/nvim-dap-go"},
 })
 
 

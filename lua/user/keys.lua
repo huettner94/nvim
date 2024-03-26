@@ -1,4 +1,6 @@
 local wk = require("which-key")
+local dap = require("dap")
+local dapui = require("dapui")
 
 wk.register({
   f = {
@@ -20,6 +22,16 @@ wk.register({
     b = { "<cmd>Telescope git_branches<cr>", "Branches" },
   },
   d = { 
+    name = "Debugger",
+    u = { dapui.toggle, "Open UI"},
+    b = { dap.toggle_breakpoint, "Toggle Breakpoint"},
+    c = { dap.continue, "Continue/Start"},
+    t = { dap.terminate, "Terminate"},
+    s = { dap.step_into, "Step Into"},
+    n = { dap.step_over, "Next"},
+    o = { dap.step_out, "Step Out"},
+  },
+  D = { 
     name = "Diagnostics",
     l = {"<cmd>Telescope diagnostics<cr>", "List"},
     s = { vim.diagnostic.open_float, "Show"},
