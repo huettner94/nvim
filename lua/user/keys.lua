@@ -21,6 +21,10 @@ wk.register({
     c = { "<cmd>Telescope git_commits<cr>", "Commits" },
     b = { "<cmd>Telescope git_branches<cr>", "Branches" },
   },
+  c = {
+    name = "Code",
+    a = { vim.lsp.buf.code_action, "Actions" },
+  },
   d = { 
     name = "Debugger",
     u = { dapui.toggle, "Open UI"},
