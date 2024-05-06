@@ -76,6 +76,8 @@ require("lazy").setup({
   { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
 -- Automagic debug adapter for go https://github.com/leoluz/nvim-dap-go
   {"leoluz/nvim-dap-go"},
+-- file tree https://github.com/nvim-tree/nvim-tree.lua
+  {"nvim-tree/nvim-tree.lua"},
 })
 
 

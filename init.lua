@@ -10,6 +10,7 @@ require("user.notsosafelinks")
 require("user.lualine")
 require("user.gitsigns")
 require("user.dap")
+require("user.nvimtree")
 -- Configure keys at the end when all is loaded
 require("user.keys")
 

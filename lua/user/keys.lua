@@ -52,4 +52,5 @@ wk.register({
     end,
     "Save without formatting"
   },
+  t = {"<cmd>NvimTreeToggle<cr>", "File Tree"}
 }, { prefix = "<leader>" })
