@@ -13,14 +13,16 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspformat = require("lsp-format")
 lspformat.setup {}
 local on_attach = function(client, bufnr)
-    lspformat.on_attach(client, bufnr)
+  lspformat.on_attach(client, bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(true, nil)
+  end
 end
 
 -- Configure all the language servers
 local servers = {
   'clangd', -- c, c++
   'rust_analyzer', -- rust
-  "gopls", -- golang
   "marksman" -- markdown
 }
 for _, lsp in ipairs(servers) do
@@ -33,4 +35,19 @@ lspconfig["pyright"].setup {
   capabilities = capabilities,
   flake8 = {enabled = true}
 }
-
+lspconfig.gopls.setup({
+    on_attach = on_attach,
+    settings = {
+      gopls = {
+        ["ui.inlayhint.hints"] = {
+          assignVariableTypes = true,
+          compositeLiteralFields = true,
+          compositeLiteralTypes = true,
+          constantValues = true,
+          functionTypeParameters = true,
+          parameterNames = true,
+          rangeVariableTypes = true
+        },
+      },
+    },
+ })
