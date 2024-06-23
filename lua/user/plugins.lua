@@ -79,6 +79,8 @@ require("lazy").setup({
   {"leoluz/nvim-dap-go"},
 -- file tree https://github.com/nvim-tree/nvim-tree.lua
   {"nvim-tree/nvim-tree.lua"},
+-- sticky scrolling https://github.com/nvim-treesitter/nvim-treesitter-context
+  {"nvim-treesitter/nvim-treesitter-context"},
 })
 
 
