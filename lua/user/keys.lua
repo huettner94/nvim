@@ -24,6 +24,7 @@ wk.register({
   c = {
     name = "Code",
     a = { vim.lsp.buf.code_action, "Actions" },
+    r = { vim.lsp.buf.rename, "Rename" },
   },
   d = { 
     name = "Debugger",
