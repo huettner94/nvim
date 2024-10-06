@@ -23,7 +23,8 @@ end
 local servers = {
   'clangd', -- c, c++
   'rust_analyzer', -- rust
-  "marksman" -- markdown
+  "marksman", -- markdown
+  "dartls" -- dart
 }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
