@@ -31,9 +31,11 @@ wk.add({
   { "<leader>du", dapui.toggle, desc = "Open UI" },
 
   { "<leader>f", group = "File" },
+  { "<leader>fc", "<cmd>Telescope resume<cr>", desc = "Resume" },
   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File" },
   { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Grep" },
   { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Open Recent File" },
+  { "<leader>fp", "<cmd>Telescope pickers<cr>", desc = "Old searches" },
 
   { "<leader>g", group = "Goto" },
   { "<leader>gD", vim.lsp.buf.declaration, desc = "Declaration" },
