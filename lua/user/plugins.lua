@@ -49,8 +49,6 @@ require("lazy").setup({
 -- Automatically loading .venv files https://github.com/linux-cultist/venv-selector.nvim
   {
     "linux-cultist/venv-selector.nvim",
-    branch = "regexp", -- This is the regexp branch, use this for the new version
-    event = "VeryLazy",
     opts = {
       name = ".venv"
     }
