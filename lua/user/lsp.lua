@@ -22,7 +22,6 @@ end
 -- Configure all the language servers
 local servers = {
   'clangd', -- c, c++
-  'rust_analyzer', -- rust
   "marksman", -- markdown
   "dartls" -- dart
 }
@@ -35,6 +34,17 @@ end
 lspconfig["pyright"].setup {
   capabilities = capabilities,
   flake8 = {enabled = true}
+}
+lspconfig["rust_analyzer"].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      check = {
+        command = "clippy",
+      },
+    },
+  },
 }
 lspconfig.gopls.setup({
     on_attach = on_attach,
