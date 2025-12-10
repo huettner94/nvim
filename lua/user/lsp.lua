@@ -2,9 +2,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
--- now real lsp config
-
-local lspconfig = require('lspconfig')
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -26,16 +23,20 @@ local servers = {
   "dartls" -- dart
 }
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+  vim.lsp.config[lsp] = {
     capabilities = capabilities,
     on_attach = on_attach
   }
+  vim.lsp.enable(lsp)
 end
-lspconfig["pyright"].setup {
+
+vim.lsp.config["pyright"] = {
   capabilities = capabilities,
   flake8 = {enabled = true}
 }
-lspconfig["rust_analyzer"].setup {
+vim.lsp.enable("pyright")
+
+vim.lsp.config["rust_analyzer"] = {
   capabilities = capabilities,
   on_attach = on_attach,
   settings = {
@@ -46,7 +47,9 @@ lspconfig["rust_analyzer"].setup {
     },
   },
 }
-lspconfig.gopls.setup({
+vim.lsp.enable("rust_analyzer")
+
+vim.lsp.config["gopls"] = {
     on_attach = on_attach,
     settings = {
       gopls = {
@@ -61,4 +64,5 @@ lspconfig.gopls.setup({
         },
       },
     },
- })
+ }
+vim.lsp.enable("gopls")
